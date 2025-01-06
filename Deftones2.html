@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deftones</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-image: url("https://w0.peakpx.com/wallpaper/36/34/HD-wallpaper-black-leather-leather-texture-black-background.jpg");
+            }
+            #wrapper {
+                width: 80%;
+                max-width: 1000px; 
+                margin: 0 auto; 
+                background-color: gray;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .Datos, .Discografia, .Giras {
+                border: 3px dashed #333;
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            h1, h2, h3 {
+                text-align: center;
+            }
+            a {
+                color: purple;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="Artista">
+                <h1>Deftones</h1>
+                <center>
+                    <a href="https://www.instagram.com/deftones/" target="_blank">Instagram Oficial de Deftones</a> |
+                    <a href="https://deftones.com/" target="_blank">Sitio Oficial de Deftones</a>
+                </center>
+                <br>
+                <center>
+                    <img id="imgDeftones" src="https://rockmusicombo.wordpress.com/wp-content/uploads/2015/03/8d86a66408b3388801fde6d53644eeb8.jpg" width="250px" alt="Deftones en concierto">
+                </center>
+                <br>
+                <button onclick="changeImage()">Cambiar imagen</button>
+                <div class="Datos">
+                    <h2>Datos acerca de la banda...</h2>
+                    <ul>
+                        <li>Deftones es una banda de metal alternativo...</li>
+                    </ul>
+                    <p id="demo">Este es un párrafo que cambiará de tamaño.</p>
+                    <button onclick="cambiarEstilo()">Cambiar estilo</button>
+                </div>
+                <p id="fechaHora"></p>
+                <button onclick="mostrarFechaHora()">Mostrar fecha y hora actual</button>
+            </div>
+        </div>
+
+        <script>
+            function changeImage() {
+                var imgElement = document.getElementById("imgDeftones");
+                imgElement.src = "https://i.scdn.co/image/ab67616d0000b2730b1129853982ea17845d4eb6";
+                imgElement.alt = "My Own Summer (Shove It)";
+            }
+            
+            function mostrarFechaHora() {
+                var fechaHora = new Date();
+                document.getElementById("fechaHora").innerHTML = fechaHora;
+            }
+            
+            function cambiarEstilo() {
+                document.getElementById("demo").style.fontSize = "2em";
+            }
+        </script>
+    </body>
+</html>
